@@ -5,8 +5,6 @@ import pandas as pd
 import plotly.graph_objs as go
 import dash_html_components as html
 import dash_core_components as dcc
-from dash.html.Div import Div
-from dash.html.H1 import H1
 from dash.dependencies import Input, Output
 
 
