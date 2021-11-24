@@ -186,7 +186,6 @@ app.layout = html.Div([
                                                                 html.Div(
                                                                         className='resp',
                                                                         children=[
-                                                                                html.H5("Gráfico - Receitas"),
                                                                                 dcc.Graph(
                                                                                         id='graph-resp'
                                                                                 ),
@@ -215,55 +214,160 @@ def showGraph(value1,value2,value3,n_clicks):
                 df2 = pd.read_csv("data/startup1-2021.csv")
                 if(value3 == 'Geração de novos clientes'):
                         fig = novos_clientes(fig,df1,df2)
+                        fig.update_layout(
+                                title='Geração de novos clientes',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos clientes'
+                        )
                 elif(value3 == 'Gastos em novos investimentos'):
                         fig = novos_investimentos(fig,df1,df2)
+                        fig.update_layout(
+                                title='Gastos em novos investimentos',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos Investimentos'
+                        )
                 else:
                         fig = alcance(fig,df1,df2)
+                        fig.update_layout(
+                                title='Grafico do alcance',
+                                xaxis_title='Meses',
+                                yaxis_title='Alcance'
+                        )
         elif((value1 == 'Startup 2-20' and value2 == 'Startup 2-21') or (value2 == 'Startup 2-20' and value1 == 'Startup 2-21')):
                 df1 = pd.read_csv("data/startup2-2020.csv")
                 df2 = pd.read_csv("data/startup2-2021.csv")
                 if(value3 == 'Geração de novos clientes'):
                         fig = novos_clientes(fig,df1,df2)
+                        fig.update_layout(
+                                title='Geração de novos clientes',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos clientes'
+                        )
                 elif(value3 == 'Gastos em novos investimentos'):
                         fig = novos_investimentos(fig,df1,df2)
+                        fig.update_layout(
+                                title='Gastos em novos investimentos',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos Investimentos'
+                        )
                 else:
                         fig = alcance(fig,df1,df2)
+                        fig.update_layout(
+                                title='Grafico do alcance',
+                                xaxis_title='Meses',
+                                yaxis_title='Alcance'
+                        )
         elif((value1 == 'Startup 1-20' and value2 == 'Startup 2-20') or (value2 == 'Startup 1-20' and value1 == 'Startup 2-20')):
                 df1 = pd.read_csv("data/startup1-2020.csv")
                 df2 = pd.read_csv("data/startup2-2020.csv")
                 if(value3 == 'Geração de novos clientes'):
                         fig = novos_clientes(fig,df1,df2)
+                        fig.update_layout(
+                                title='Geração de novos clientes',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos clientes'
+                        )
                 elif(value3 == 'Gastos em novos investimentos'):
                         fig = novos_investimentos(fig,df1,df2)
+                        fig.update_layout(
+                                title='Gastos em novos investimentos',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos Investimentos'
+                        )
                 else:
                         fig = alcance(fig,df1,df2)
+                        fig.update_layout(
+                                title='Grafico do alcance',
+                                xaxis_title='Meses',
+                                yaxis_title='Alcance'
+                        )
         elif((value1 == 'Startup 1-20' and value2 == 'Startup 2-21') or (value2 == 'Startup 1-20' and value1 == 'Startup 2-21')):
                 df1 = pd.read_csv("data/startup1-2020.csv")
                 df2 = pd.read_csv("data/startup2-2021.csv")
                 if(value3 == 'Geração de novos clientes'):
                         fig = novos_clientes(fig,df1,df2)
+                        fig.update_layout(
+                                title='Geração de novos clientes',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos clientes'
+                        )
                 elif(value3 == 'Gastos em novos investimentos'):
                         fig = novos_investimentos(fig,df1,df2)
+                        fig.update_layout(
+                                title='Gastos em novos investimentos',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos Investimentos'
+                        )
                 else:
                         fig = alcance(fig,df1,df2)
+                        fig.update_layout(
+                                title='Grafico do alcance',
+                                xaxis_title='Meses',
+                                yaxis_title='Alcance'
+                        )
         elif((value1 == 'Startup 1-21' and value2 == 'Startup 2-20') or (value2 == 'Startup 1-21' and value1 == 'Startup 2-20')):
                 df1 = pd.read_csv("data/startup1-2021.csv")
                 df2 = pd.read_csv("data/startup2-2020.csv")
                 if(value3 == 'Geração de novos clientes'):
                         fig = novos_clientes(fig,df1,df2)
+                        fig.update_layout(
+                                title='Geração de novos clientes',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos clientes',
+                                font=dict(
+                                        family="Courier New, monospace",
+                                        size=18,
+                                        color="#7f7f7f"
+                                )
+                        )
                 elif(value3 == 'Gastos em novos investimentos'):
                         fig = novos_investimentos(fig,df1,df2)
+                        fig.update_layout(
+                                title='Gastos em novos investimentos',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos Investimentos',
+                                font=dict(
+                                        family="Courier New, monospace",
+                                        size=18,
+                                        color="#7f7f7f"
+                                )
+                        )
                 else:
                         fig = alcance(fig,df1,df2)
+                        fig.update_layout(
+                                title='Grafico do alcance',
+                                xaxis_title='Meses',
+                                yaxis_title='Alcance',
+                                font=dict(
+                                        family="Courier New, monospace",
+                                        size=18,
+                                        color="#7f7f7f"
+                                )
+                        )
         elif((value1 == 'Startup 1-21' and value2 == 'Startup 2-21') or (value2 == 'Startup 1-21' and value1 == 'Startup 2-21')):
                 df1 = pd.read_csv("data/startup1-2021.csv")
                 df2 = pd.read_csv("data/startup2-2021.csv")
                 if(value3 == 'Geração de novos clientes'):
                         fig = novos_clientes(fig,df1,df2)
+                        fig.update_layout(
+                                title='Geração de novos clientes',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos clientes'
+                        )
                 elif(value3 == 'Gastos em novos investimentos'):
                         fig = novos_investimentos(fig,df1,df2)
+                        fig.update_layout(
+                                title='Gastos em novos investimentos',
+                                xaxis_title='Meses',
+                                yaxis_title='Novos Investimentos'
+                        )
                 else:
                         fig = alcance(fig,df1,df2)
+                        fig.update_layout(
+                                title='Grafico do alcance',
+                                xaxis_title='Meses',
+                                yaxis_title='Alcance - Pessoas'
+                        )
         else:
                 print("AHHHHHH vai tomar no cu poha")
         return fig
@@ -340,6 +444,12 @@ def figGraph2(value,n_clicks):
                 fig.add_trace(go.Scatter(y=nClientes1,x=columns1,name='Clientes Gerados - ano 2020'))
                 fig.add_trace(go.Scatter(y=nClientes2,x=columns2,name='Clientes Gerados - ano 2021'))
 
+        fig.update_layout(
+                title='Clientes gerados ao longo dos meses',
+                xaxis_title='Meses',
+                yaxis_title='Clientes Gerados'
+        )
+
         return fig
 
 @app.callback(Output('example-graph-3', 'figure'),
@@ -359,7 +469,11 @@ def figGraph3(value,n_clicks):
                 nClientes1 = (df1["novos_parceiros"]).values.tolist()
                 
                 fig.add_trace(go.Scatter(y=nClientes1,x=columns1,name='Novos Parceiros'))
-
+        fig.update_layout(
+                title='Número de novos Parceiros ao longo dos meses',
+                xaxis_title='Meses',
+                yaxis_title='Número de Parceiros'
+        )
         return fig
 
 @app.callback(Output('example-graph-4', 'figure'),
@@ -386,6 +500,12 @@ def figGraph4(value,n_clicks):
                 
                 
                 fig.add_trace(go.Scatter(y=soma,x=columns1,name='Alcance total'))
+
+        fig.update_layout(
+                title='Alcance Total ao longo dos meses',
+                xaxis_title='Meses',
+                yaxis_title='Alcance'
+        )
 
         return fig
 
