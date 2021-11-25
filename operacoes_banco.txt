@@ -1,0 +1,41 @@
+<------CRIANDO TABELA NO BANCO-------->
+
+USE Banco_Dados_ST1
+CREATE TABLE ST1(
+	clientes_gerados int,
+	pessoas_impactadas int,
+	instituicoes_impactadas int,
+	novos_parceiros int,
+	receita int,
+	dinheiro_investido int,
+	numero_de_integrantes int,
+	integrantes_novos_mes int,
+	preco_servico int,
+	mercados_unit_economic_abrangidos int,
+	numero_de_vendas int,
+	pessoas_entrevistadas_total int,
+	)
+------------------------------- 
+<------FAZENDO CONSULTA NO BANCO-------->
+
+
+USE Banco_Dados_ST1
+SELECT * from ST1
+
+-------------------------------
+<------INSERINDO VALORES NO BANCO-------->
+
+INSERT INTO ST1(clientes_gerados,
+	pessoas_impactadas,
+	instituicoes_impactadas,
+	novos_parceiros,
+	receita,
+	dinheiro_investido ,
+	numero_de_integrantes ,
+	integrantes_novos_mes,
+	preco_servico ,
+	mercados_unit_economic_abrangidos,
+	numero_de_vendas,
+	pessoas_entrevistadas_total)
+VALUES
+    (3, 4, 2, 5, 5000, 7500, 6, 0, 500, 2, 10, 7)
