@@ -369,7 +369,7 @@ def showGraph(value1,value2,value3,n_clicks):
                                 yaxis_title='Alcance - Pessoas'
                         )
         else:
-                print("AHHHHHH vai tomar no cu poha")
+                print("ERROR")
         return fig
 
 @app.callback(Output('submit-val', 'n_clicks'),
